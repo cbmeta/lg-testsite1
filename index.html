@@ -10,6 +10,7 @@
   s.parentNode.insertBefore(t,s)}(window, document,'script',
   'https://connect.facebook.net/en_US/fbevents.js');
   var pixelNum = 785001290307403;
+  document.getElementById("myPixel").innerHTML = pixelNum;
   fbq('init', pixelNum);
   fbq('track', 'PageView');
 </script>
@@ -22,7 +23,7 @@
 </head>
 <body>
     <h2>Pixel Test Page for FBQ</h2>
-    <h3>"The pixel used is: "+ pixelNum</h3>
+    <h3>"The pixel used is: " <span id="myText"></span></h3>
     <div>
     <ul>
         <li><button id="addToWishlistButton" type="button">Add to Wishlist</button></li>
