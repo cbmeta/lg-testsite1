@@ -37,6 +37,8 @@ Tenant:
         <li><button id="subcribeButton" type="button">Subscribe</button></li>
         <li><button id="registrationButton" type="button">Registration</button></li>
         <li><button id="siteButton" type="button">Site 1</button></li>
+      <li></li>
+      <li><button id="purchaseButtonx2" type="button">Purchase x2</button></li>
     </ul>
     </div>
 
@@ -71,6 +73,19 @@ document.getElementById('registrationButton').addEventListener('click', function
   fbq('track', 'CompleteRegistration');
 }, false);
 
+
+
+document.getElementById('purchaseButtonx2').addEventListener
+  ('click', function() {
+                          fbq('track', 'Purchase', {
+                            value: 100,
+                            currency: 'USD',
+                          });
+                              fbq('track', 'Purchase', {
+                            value: 100,
+                            currency: 'USD',
+                          });
+                        }, false);
   
 </script>
 </body>
