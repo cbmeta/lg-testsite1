@@ -91,6 +91,8 @@ document.getElementById('purchaseNoValueButton').addEventListener('click', funct
         <li><button id="purchaseButton" type="button">Purchase</button></li>
         <li><button id="subcribeButton" type="button">Subscribe</button></li>
         <li><button id="registrationButton" type="button">Registration</button></li>
+
+		<li><button id="invalidpurchaseButton" type="button">Invalid Purchase</button></li>
     </ul>
     </div>
 
@@ -121,6 +123,12 @@ document.getElementById('subcribeButton').addEventListener('click', function() {
 document.getElementById('registrationButton').addEventListener('click', function() {
   fbq('track', 'CompleteRegistration');
 }, false);
+
+	
+document.getElementById('invalidpurchaseButton').addEventListener('click', function() {
+	fbq('track', 'Purchase', {value: 'fdsjflds',currency: 'USD',});
+}, false);
+	
 </script>
 </body>
 
